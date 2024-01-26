@@ -10,13 +10,13 @@ export default function Desc(){
         </div>
         <div className="des" style={{fontSize:'14px',color:'rgba(255, 255, 255, 0.66)'}}>
             <div className="description mx-3">
-                <p style={{margin:'4px'}}>Designed and built with all the love in the world by the NewsOne team with all the sources mentioned.</p>
+                <p style={{margin:'3px'}}>Designed and built with all the love in the world by the NewsOne team with all the sources mentioned.</p>
             </div>
             <div className="license mx-3">
-                <p style={{margin:'4px'}}>Code licensed bootstrap, news by News API</p>
+                <p style={{margin:'3px'}}>Code licensed bootstrap, news by News API</p>
             </div>
             <div className="version mx-3">
-                <p>version v1.1.4</p>
+                <p style={{margin:'3px'}}>version v1.1.4</p>
             </div>
         </div>
       </div>

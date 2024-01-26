@@ -28,6 +28,7 @@ export function News(props){
   //lifecycle method
   useEffect(()=>{
     updateNews();
+    //eslint-disable-next-line
   },[])
 
   const capitalizeFirstLetter = (string)=>{
@@ -46,8 +47,9 @@ export function News(props){
 
   };
     return (
-        <div className="container my-3">
-            <h1 className='text-center my-3' >NewsOne - Top {capitalizeFirstLetter(props.category)} Headlines</h1>
+        <div className="container my-3" >
+            <h1 className='text-center' style={{marginTop:'90px'}}>NewsOne - Top {capitalizeFirstLetter(props.category)} Headlines </h1>
+
             {loading && <Spinner/>} {/*if loading is true then spinner component works otherwise not*/}
             <InfiniteScroll
             dataLength={articles.length}
@@ -58,7 +60,7 @@ export function News(props){
             <div className="row mx-3 my-3">
               {articles.map((element)=>{ // for loop for array in js
                   return <div className="col-md-4" key={element.url}>
-                            <NewItem title = {element.title?element.title:"News title not available - NewsOne"} description={element.description?element.description:"The description if this news in not available, you can see whole news coverage by clicking on the button below."} imageUrl={element.urlToImage?element.urlToImage:newsImage} url={element.url?element.url:"https://timesofindia.indiatimes.com/"} source={element.source.name?element.source.name:"unknown"} author={element.author} publishedAt={element.publishedAt}/>
+                            <NewItem title = {element.title?element.title:"News title not available - NewsOne"} description={element.description?element.description:"To read more about the news click on the read more button below:"} imageUrl={element.urlToImage?element.urlToImage:newsImage} url={element.url?element.url:"https://timesofindia.indiatimes.com/"} source={element.source.name?element.source.name:"unknown"} author={element.author} publishedAt={element.publishedAt}/>
                           </div>
               })}
 
